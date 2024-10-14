@@ -44,7 +44,7 @@ public class AccountService {
 
             request = new HttpEntity<>(headers);
             restTemplate.exchange(
-                    "http://localhost:8082/{accountId}",
+                    "http://localhost:8081/{accountId}",
                     HttpMethod.POST,
                     request,
                     new ParameterizedTypeReference<Map<String, Object>>() {},

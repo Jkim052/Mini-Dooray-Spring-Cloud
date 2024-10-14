@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gateway (1) (com.nhnacademy)" />
+        <module name="taskapi" />
+        <module name="gateway" />
+        <module name="mini-dooray-account" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
+      <module name="gateway (1) (com.nhnacademy)" options="-parameters" />
+      <module name="mini-dooray-account" options="-parameters" />
+      <module name="taskapi" options="-parameters" />
+    </option>
+  </component>
+</project>

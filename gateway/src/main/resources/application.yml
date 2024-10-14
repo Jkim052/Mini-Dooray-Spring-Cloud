@@ -1,0 +1,26 @@
+spring:
+
+  application:
+    name: Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: account-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/accounts/**  # "/accounts/**"로 시작하는 모든 요청을 Account API로 라우팅
+          filters:
+            - StripPrefix=1  # /accounts를 제거하고 Account API로 전달
+
+        - id: task-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/projects/**  # "/projects/**" 경로로 오는 모든 요청을 Task API로 라우팅
+          filters:
+            - StripPrefix=1  # "/projects"를 제거하고 Task API로 전달
+
+server:
+  port: 8081
+
+
+
