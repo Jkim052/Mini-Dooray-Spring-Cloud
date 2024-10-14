@@ -1,0 +1,21 @@
+spring:
+
+  application:
+    name: taskapi
+
+  jpa:
+    generate-ddl: 'true'
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true # sql 과 함께 jpql 주석처리되어  콘솔창에 출력
+
+  profiles:
+    active: dev
+
+server:
+  port: 8082
+
